@@ -1,0 +1,11 @@
+version: '3'
+services:
+  demon:
+    container_name: demon
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    env_file: .docker-env
+    network_mode: host
+    volumes:
+      - ../src:/app/src
