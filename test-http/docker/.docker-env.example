@@ -1,0 +1,7 @@
+# API credentials
+AWG_USER_NAME=cps@mitre.org
+AWG_API_KEY=TCF25YM-39C4H6D-KA32EGF-V5XSHN3
+AWG_BASE_URL=http://localhost:3000
+
+# other
+RUN_PERFORMANCE_TESTS=False

@@ -1,0 +1,339 @@
+[
+    {
+        "authority": {
+            "active_roles": [
+                "SECRETARIAT",
+                "CNA"
+            ]
+        },
+        "name": "MITRE Corporation",
+        "short_name": "mitre",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1248
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Booker LLC",
+        "short_name": "window_1",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1251
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Singh, Smith and Fisher",
+        "short_name": "church_2",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1304
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Foster-Reynolds",
+        "short_name": "officer_3",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 669
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Clark and Sons",
+        "short_name": "range_4",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1415
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Adams, Nielsen and Hensley",
+        "short_name": "win_5",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1309
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Carpenter-Huang",
+        "short_name": "activity_6",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 657
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Anderson LLC",
+        "short_name": "seem_7",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 794
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Wallace Group",
+        "short_name": "cause_8",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1094
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Alexander, Benson and Hicks",
+        "short_name": "admit_9",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1043
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Dawson PLC",
+        "short_name": "beat_10",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 835
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Alexander, Lewis and Baker",
+        "short_name": "tax_11",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 814
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Smith, Guerrero and Chen",
+        "short_name": "face_12",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 732
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Davis, Carr and Castaneda",
+        "short_name": "deal_13",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 759
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Adams, White and Graham",
+        "short_name": "environmental_14",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1464
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Moon-Parrish",
+        "short_name": "evidence_15",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 942
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Potter Ltd",
+        "short_name": "response_16",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 826
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Webb, Cook and Wilson",
+        "short_name": "if_17",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 952
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Montoya, Smith and Jones",
+        "short_name": "most_18",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1358
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Young Inc",
+        "short_name": "interesting_19",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 896
+        }
+    },
+    {
+        "authority": {
+            "active_roles": [
+                "CNA"
+            ]
+        },
+        "name": "Chase, May and Jones",
+        "short_name": "sister_20",
+        "time": {
+            "modified": "2021-05-11T15:07:19.468216Z",
+            "created": "2021-05-11T15:07:19.468216Z"
+        },
+        "policies": {
+            "id_quota": 1408
+        }
+    }
+]
