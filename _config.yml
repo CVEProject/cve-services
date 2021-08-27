@@ -1,0 +1,20 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Common Vulnerabilities and Exposures
+email: cve@mitre.org
+description: > # this means to ignore newlines until "baseurl:"
+  Common Vulnerabilities and Exposures (CVE&reg;) is a dictionary of common
+  names (i.e., CVE Identifiers) for publicly known information security
+  vulnerabilities. CVE's common identifiers enable data exchange between
+  security products and provide a baseline index point for evaluating coverage
+  of tools and services.
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Build settings
+markdown: kramdown
