@@ -1,0 +1,254 @@
+[
+    {
+        "cve": {
+            "containers": {
+                "cna": {
+                    "affected": [
+                        {
+                            "vendor": "Netis Korea",
+                            "versions": [
+                                {
+                                    "version": "1.1.10"
+                                }
+                            ]
+                        }
+                    ],
+                    "descriptions": [
+                        {
+                            "lang": "eng",
+                            "value": "Improper Input validation vulnerability exists in Netis Korea D'live AP which could cause arbitrary command injection and execution when the time setting (using ntpServerlp1 parameter) for the users."
+                        }
+                    ],
+                    "generator": {
+                        "engine": "Vulnogram 0.0.9"
+                    },
+                    "metrics": [
+                        {
+                            "cvss-v_3_1": {
+                                "attackComplexity": "HIGH",
+                                "attackVector": "ADJACENT_NETWORK",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 6.4,
+                                "baseSeverity": "MEDIUM",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "privilegesRequired": "HIGH",
+                                "scope": "UNCHANGED",
+                                "userInteraction": "NONE",
+                                "vectorString": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                                "version": "3.1"
+                            }
+                        }
+                    ],
+                    "problemTypes": [
+                        {
+                            "descriptions": [
+                                [
+                                    {
+                                        "CWE-ID": "CWE-20 Improper Input Validation",
+                                        "description": "CWE-20 Improper Input Validation",
+                                        "lang": "eng",
+                                        "type": "CWE"
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    "providerMetadata": {
+                        "id": "9845b82e-47a9-4fe7-8908-68646f952267"
+                    },
+                    "references": [
+                        {
+                            "refsource": "CONFIRM",
+                            "url": "https://www.boho.or.kr/krcert/secNoticeView.do?bulletin_writing_sequence=35797"
+                        }
+                    ],
+                    "source": {
+                        "discovery": "UNKNOWN"
+                    }
+                }
+            },
+            "cveMetadata": {
+                "assigner": "9845b82e-47a9-4fe7-8908-68646f952267",
+                "id": "CVE-2020-7842",
+                "state": "PUBLISHED",
+                "title": "D'live AP command injection vulnerability",
+                "updated": "2021-09-13"
+            },
+            "dataType": "CVE_RECORD",
+            "dataVersion": "5.0"
+        }
+    },
+    {
+        "cve": {
+            "containers": {
+                "cna": {
+                    "affected": [
+                        {
+                            "vendor": "Netis Korea",
+                            "versions": [
+                                {
+                                    "version": "1.1.10"
+                                }
+                            ]
+                        }
+                    ],
+                    "descriptions": [
+                        {
+                            "lang": "eng",
+                            "value": "Improper Input validation vulnerability exists in Netis Korea D'live AP which could cause arbitrary command injection and execution when the time setting (using ntpServerlp1 parameter) for the users."
+                        }
+                    ],
+                    "generator": {
+                        "engine": "Vulnogram 0.0.9"
+                    },
+                    "metrics": [
+                        {
+                            "cvss-v_3_1": {
+                                "attackComplexity": "HIGH",
+                                "attackVector": "ADJACENT_NETWORK",
+                                "availabilityImpact": "HIGH",
+                                "baseScore": 6.4,
+                                "baseSeverity": "MEDIUM",
+                                "confidentialityImpact": "HIGH",
+                                "integrityImpact": "HIGH",
+                                "privilegesRequired": "HIGH",
+                                "scope": "UNCHANGED",
+                                "userInteraction": "NONE",
+                                "vectorString": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                                "version": "3.1"
+                            }
+                        }
+                    ],
+                    "problemTypes": [
+                        {
+                            "descriptions": [
+                                [
+                                    {
+                                        "CWE-ID": "CWE-20 Improper Input Validation",
+                                        "description": "CWE-20 Improper Input Validation",
+                                        "lang": "eng",
+                                        "type": "CWE"
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    "providerMetadata": {
+                        "id": "9845b82e-47a9-4fe7-8908-68646f952267"
+                    },
+                    "references": [
+                        {
+                            "refsource": "CONFIRM",
+                            "url": "https://www.boho.or.kr/krcert/secNoticeView.do?bulletin_writing_sequence=35797"
+                        }
+                    ],
+                    "source": {
+                        "discovery": "UNKNOWN"
+                    }
+                }
+            },
+            "cveMetadata": {
+                "assigner": "9845b82e-47a9-4fe7-8908-68646f952267",
+                "id": "CVE-2020-7843",
+                "state": "PUBLISHED",
+                "title": "D'live AP command injection vulnerability",
+                "updated": "2021-09-13"
+            },
+            "dataType": "CVE_RECORD",
+            "dataVersion": "5.0"
+        }
+    },
+    {
+        "cve": {
+            "cveMetadata": {
+                "assigner": "9845b82e-47a9-4fe7-8908-68646f952267",
+                "id": "CVE-2017-5833",
+                "state": "REJECTED",
+                "updated": "2021-09-13"
+            },
+            "dataType": "CVE_RECORD",
+            "dataVersion": "5.0",
+            "descriptions": [
+                {
+                    "lang": "eng",
+                    "value": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA.  Further investigation showed that it was not a security issue.  Notes: none."
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "cveMetadata": {
+                "assigner": "9845b82e-47a9-4fe7-8908-68646f952267",
+                "id": "CVE-2020-35071",
+                "state": "REJECTED",
+                "updated": "2021-09-13"
+            },
+            "dataType": "CVE_RECORD",
+            "dataVersion": "5.0",
+            "descriptions": [
+                {
+                    "lang": "eng",
+                    "value": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: none.  Reason: This candidate was withdrawn by its CNA.  Further investigation showed that it was not a security issue.  Notes: none."
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "containers": {
+                "cna": {
+                    "affected": [
+                        {
+                            "vendor": "n/a",
+                            "versions": [
+                                {
+                                    "version": "3.7 to 3.7.1, 3.6 to 3.6.5, 3.5 to 3.5.7 and earlier unsupported versions"
+                                }
+                            ]
+                        }
+                    ],
+                    "descriptions": [
+                        {
+                            "lang": "eng",
+                            "value": "A vulnerability was found in Moodle affecting 3.7 to 3.7.1, 3.6 to 3.6.5, 3.5 to 3.5.7 and earlier unsupported versions, where users with the capability to create courses were assigned as a teacher in those courses, regardless of whether they had the capability to be automatically assigned that role."
+                        }
+                    ],
+                    "problemTypes": [
+                        {
+                            "descriptions": [
+                                [
+                                    {
+                                        "CWE-ID": "CWE-285",
+                                        "description": "CWE-285",
+                                        "lang": "eng",
+                                        "type": "CWE"
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    "providerMetadata": {
+                        "id": "9845b82e-47a9-4fe7-8908-68646f952267"
+                    },
+                    "references": [
+                        {
+                            "name": "https://moodle.org/mod/forum/discuss.php?d=391031",
+                            "refsource": "MISC",
+                            "url": "https://moodle.org/mod/forum/discuss.php?d=391031"
+                        }
+                    ]
+                }
+            },
+            "cveMetadata": {
+                "assigner": "9845b82e-47a9-4fe7-8908-68646f952267",
+                "id": "CVE-2019-14828",
+                "state": "PUBLISHED",
+                "updated": "2021-09-13"
+            },
+            "dataType": "CVE_RECORD",
+            "dataVersion": "5.0"
+        }
+    }
+]
