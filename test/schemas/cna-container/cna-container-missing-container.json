@@ -1,0 +1,5 @@
+{
+    "providerMetadata": {
+        "test": "This will fail against validation."
+    }
+}

@@ -1,0 +1,30 @@
+name: "Docker latest"
+
+on:
+  pull_request:
+    branches: [staging] # This workflow will run when a PR is merged or when a commit is made directly to these branches. 
+    # NOTE: We want to create a "latest" Github package on changes to `dev`.
+
+jobs:
+  build-and-push-image:
+    name: Push Docker image to GitHub Packages
+    runs-on: ubuntu-latest
+    # we can run tests here, and require that they pass
+    # but tests should pass on the pull request used to kick this job off,
+    # unless we allow changes to `dev` or `release` branches without PRs
+    # needs: npm-run-tests
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Log in to GCR
+      run: |
+        docker login docker.pkg.github.com \
+          --username ${{ github.actor }} \
+          --password ${{ secrets.GITHUB_TOKEN }}
+    - name: Build Docker latest image
+      run: |
+        docker build \
+        --file docker/Dockerfile \
+        --tag docker.pkg.github.com/cveproject/cve-services/cveservices-staging:latest .
+    - name: Push Docker latest image to GCR
+      run: docker push docker.pkg.github.com/cveproject/cve-services/cveservices-staging:latest
