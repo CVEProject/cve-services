@@ -1,0 +1,44 @@
+name: "Black Box Testing"
+
+# run this on a pull request for testing
+on:
+  pull_request:
+
+# use a single job at first
+jobs:
+  run-functional-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Build and Run Services and Mongo Containers
+      run: |
+        cp docker/.docker-env.example docker/.docker-env
+        docker-compose --file docker/docker-compose.yml build
+        docker-compose --file docker/docker-compose.yml up -d
+    - name: Build Test Container
+      run: |
+        cp test-http/docker/.docker-env.example test-http/docker/.docker-env
+        docker-compose --file test-http/docker/docker-compose.yml build
+    - name: Run Test Container
+      run: |
+        docker-compose --file test-http/docker/docker-compose.yml up -d
+    - name: Sleep
+      run: bash -c "while ! docker-compose --file docker/docker-compose.yml logs --tail=10 cveawg | grep -q 'Serving on port'; do sleep 1; done"
+    - name: Load Data into MongoDb
+      run: docker-compose -f docker/docker-compose.yml exec -T cveawg npm run populate:dev y
+    - name: Run Black Box Tests
+      run: |
+        docker-compose --file test-http/docker/docker-compose.yml exec -T demon pytest src/ | tee test-http/src/testOutput.txt
+    - name: Archive Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: test-http/src/testOutput.txt
+        retention-days: 1
+    - name: Extract Tests Results
+      run: docker-compose --file test-http/docker/docker-compose.yml exec -T demon /bin/bash src/parse_tests_output.sh | (read foo; echo "##[set-output name=result;]$(echo $foo)")
+      id: tests_result
+    - name: Evaluate Tests Results
+      if: ${{ steps.tests_result.outputs.result == 'Tests failed' }}
+      run: exit 1

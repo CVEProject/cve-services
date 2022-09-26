@@ -1,0 +1,31 @@
+{
+    "cnaContainer": {
+        "rejectedReasons": [
+            {
+                "lang": "fr",
+                "value": "I professional site herself recently behavior. Situation institution meeting recognize successful.",
+                "supportingMedia": [
+                    {
+                        "type": "text/markdown",
+                        "base64": false,
+                        "value": "*this* _is_ supporting media in ~markdown~"
+                    }
+                ]
+            },
+            {
+                "lang": "fr",
+                "value": "I professional site herself recently behavior. Situation institution meeting recognize successful.",
+                "supportingMedia": [
+                    {
+                        "type": "text/markdown",
+                        "base64": false,
+                        "value": "*this* _is_ supporting media in ~markdown~"
+                    }
+                ]
+            }
+        ],
+        "replacedBy": [
+            "CVE-1999-0006"
+        ]
+    }
+}

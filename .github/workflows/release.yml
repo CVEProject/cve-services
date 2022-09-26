@@ -1,0 +1,33 @@
+name: "Docker release"
+
+on:
+  release:
+    types: [published]
+  # NOTE: We want to create a "release" Github package when creating actual releases in GitHub.
+
+jobs:
+  build-and-push-image:
+    name: Push Docker image to GitHub Packages
+    runs-on: ubuntu-latest
+    # we can run tests here, and require that they pass
+    # but tests should pass on the pull request used to kick this job off,
+    # unless we allow changes to `dev` or `release` branches without PRs
+    # needs: npm-run-tests
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Extract tag name
+      run: echo "##[set-output name=tag;]$(echo ${GITHUB_REF#refs/tags/})"
+      id: extract_tag
+    - name: Log in to GCR
+      run: |
+        docker login docker.pkg.github.com \
+          --username ${{ github.actor }} \
+          --password ${{ secrets.GITHUB_TOKEN }}
+    - name: Build Docker release image
+      run: |
+        docker build \
+        --file docker/Dockerfile \
+        --tag docker.pkg.github.com/cveproject/cve-services/cveservices-${{ steps.extract_tag.outputs.tag }}:release .
+    - name: Push Docker release image to GCR
+      run: docker push docker.pkg.github.com/cveproject/cve-services/cveservices-${{ steps.extract_tag.outputs.tag }}:release
