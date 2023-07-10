@@ -1,0 +1,2 @@
+# Ensure Git does not commit any crlf endings. Force LF in git.
+text eol=lf
