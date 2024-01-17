@@ -1,0 +1,35 @@
+const chai = require('chai')
+const expect = chai.expect
+
+const { containsNoInvalidCharacters } = require('../../../src/middleware/middleware')
+
+describe('Testing Invalid Character checker', () => {
+  context('negative tests', () => {
+    it('Should fail when detecting a >', async () => {
+      try {
+        containsNoInvalidCharacters('sa>fe')
+      } catch (err) {
+        expect(err.message).to.contain('contains invalid character: >')
+      }
+    })
+    it('Should fail when detecting a <', async () => {
+      try {
+        containsNoInvalidCharacters('sa<fe')
+      } catch (err) {
+        expect(err.message).to.contain('contains invalid character: <')
+      }
+    })
+    it('Should fail when detecting a "', async () => {
+      try {
+        containsNoInvalidCharacters('sa"fe')
+      } catch (err) {
+        expect(err.message).to.contain('contains invalid character: "')
+      }
+    })
+  })
+  context('positive test', () => {
+    it('Should pass if no invalid characters', async () => {
+      containsNoInvalidCharacters('safe')
+    })
+  })
+})

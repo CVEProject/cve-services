@@ -1,0 +1,88 @@
+/* eslint-disable no-unused-expressions */
+
+const chai = require('chai')
+chai.use(require('chai-http'))
+
+const expect = chai.expect
+
+const constants = require('../constants.js')
+const app = require('../../../src/index.js')
+const helpers = require('../helpers.js')
+
+const _ = require('lodash')
+
+const adpContainer = require('../../schemas/5.0/adpContainerExample.json').adpContainer
+
+// Parameters for the CVE-ID reservation helper
+const requestLength = 1
+const shortName = 'win_5'
+const cveYear = '2023'
+const batchType = 'non-sequential'
+
+const adpLength = 1
+
+async function reserveAdp (cveId, headers, body) {
+  return await chai.request(app)
+    .put(`/api/cve/${cveId}/adp`)
+    .set(headers)
+    .send(body)
+}
+
+describe('Testing ADP insert Endpoint', () => {
+  let cveId, adpContainerCopy
+  beforeEach(async () => {
+    // Reserve a custom CVE-ID
+    cveId = await helpers.cveIdReserveHelper(requestLength, cveYear, shortName, batchType)
+    // Publish the CVE
+    await helpers.cveRequestAsCnaHelper(cveId)
+    adpContainerCopy = _.cloneDeep(adpContainer)
+  })
+  context('Positive Tests', () => {
+    it('Reserve ADP ', async () => {
+      await reserveAdp(cveId, constants.nonSecretariatUserHeaders, constants.testAdp).then((res, err) => {
+        expect(err).to.be.undefined
+        const resMessage = cveId + ' record had new ADP container for org ' + shortName + ' successfully inserted'
+        expect(res.body.message).to.include(resMessage)
+        expect(res.body.updated.containers.adp).to.have.length(adpLength)
+
+        adpContainerCopy.providerMetadata = res.body.updated.containers.adp[0].providerMetadata
+        expect(res.body.updated.containers.adp[0]).to.deep.equal(adpContainerCopy)
+        expect(res).to.have.status(200)
+      })
+    })
+  })
+  context('Negative Tests', () => {
+    it('Reserve ADP should fail if the org does not have ADP', async () => {
+      await reserveAdp(cveId, constants.badNonSecretariatUserHeaders, constants.testAdp)
+        .then((res, err) => {
+          expect(err).to.be.undefined
+          expect(res).to.have.status(403)
+          expect(res.body.error).to.include('ADP_ONLY')
+        })
+    })
+
+    it('A user should not be able to edit someone elses ADP container', async () => {
+      // First make the ADP container
+      await reserveAdp(cveId, constants.nonSecretariatUserHeaders, constants.testAdp)
+        .then((res, err) => {
+          expect(err).to.be.undefined
+          expect(res).to.have.status(200)
+        })
+
+      // Add a second Container
+      await reserveAdp(cveId, constants.nonSecretariatUserHeadersWithAdp2, constants.testAdp)
+        .then((res, err) => {
+          expect(err).to.be.undefined
+          expect(res).to.have.status(200)
+        })
+
+      await reserveAdp(cveId, constants.nonSecretariatUserHeadersWithAdp2, constants.testAdp2)
+        .then((res, err) => {
+          expect(err).to.be.undefined
+          expect(res).to.have.status(200)
+          expect(res.body.updated.containers.adp[0].descriptions[0].value).to.include('Cross-site scripting')
+          expect(res.body.updated.containers.adp[1].descriptions[0].value).to.include('Cross-site scripting2')
+        })
+    })
+  })
+})
